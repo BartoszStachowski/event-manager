@@ -1,0 +1,48 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Rick and Morty Marathon",
+      "date": "Aug 12 2021",
+      "time": "10:00",
+      "location": "Wrocław",
+      "description": "We'll be watching all night",
+      "organizer": "Bartek Stachowski",
+      "category": "fun",
+      "attendees": [
+        {
+          "id": "1",
+          "name": "Bartek Stachowski"
+        },
+        {
+          "id": "2",
+          "name": "Ada Kminek"
+        },
+        {
+          "id": "3",
+          "name": "Kamil Seter"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Learning programming",
+      "date": "Nov 12 2021",
+      "time": "12:00",
+      "location": "Lubin",
+      "description": "It will be hard work\n",
+      "organizer": "Bartek Stachowski",
+      "category": "education",
+      "attendees": [
+        {
+          "id": "1",
+          "name": "Adam Semeniuk"
+        },
+        {
+          "id": "2",
+          "name": "Karol Wojak"
+        }
+      ]
+    }
+  ]
+}
