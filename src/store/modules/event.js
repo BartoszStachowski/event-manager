@@ -9,8 +9,8 @@ export const state = {
 };
 
 export const mutations = {
-  SET_EVENTS(state, event) {
-    state.events.push(event);
+  SET_EVENTS(state, events) {
+    state.events = events;
   },
 };
 
