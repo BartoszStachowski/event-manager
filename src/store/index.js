@@ -8,4 +8,7 @@ export default new Vuex.Store({
   modules: {
     event,
   },
+  state: {
+    categories: ['job', 'education', 'fun', 'food', 'sport', 'nature'],
+  },
 });
