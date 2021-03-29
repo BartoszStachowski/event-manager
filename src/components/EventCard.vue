@@ -12,11 +12,8 @@
 </template>
 
 <script>
-import BaseIcon from './BaseIcon';
-
 export default {
   name: 'EventCard',
-  components: { BaseIcon },
   props: {
     event: Object,
   },

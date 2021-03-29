@@ -26,11 +26,9 @@
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import BaseIcon from '../components/BaseIcon';
 
 export default {
   name: 'EventShow',
-  components: { BaseIcon },
   props: ['id'],
   created() {
     this.fetchEvent(this.id);
