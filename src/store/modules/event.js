@@ -15,6 +15,9 @@ export const mutations = {
   SET_EVENTS(state, events) {
     state.events = events;
   },
+  SET_EVENT_TOTAL(state, eventsTotal) {
+    state.eventsTotal = eventsTotal;
+  },
   SET_EVENT(state, event) {
     state.event = event;
   },
@@ -33,6 +36,7 @@ export const actions = {
   fetchEvents({ commit, dispatch }, { perPage, page }) {
     EventService.getEvents(perPage, page)
       .then(res => {
+        commit('SET_EVENT_TOTAL', parseInt(res.headers['x-total-count']));
         commit('SET_EVENTS', res.data);
       })
       .catch(err => {
