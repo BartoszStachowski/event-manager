@@ -2,15 +2,18 @@
   <div id="app">
     <NavBar />
     <router-view :key="$route.fullPath" />
+    <NotificationContainer />
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar';
+import NotificationContainer from './components/NotificationContainer';
 
 export default {
   name: 'App',
   components: {
+    NotificationContainer,
     NavBar,
   },
 };

@@ -24,6 +24,6 @@ export const actions = {
     commit('PUSH', notification);
   },
   remove({ commit }, notificationToRemove) {
-    commit('DELETE', notificationToRemove)
+    commit('DELETE', notificationToRemove);
   },
 };
