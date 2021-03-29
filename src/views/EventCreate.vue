@@ -11,7 +11,7 @@
         <label>Title</label>
         <input
           type="text"
-          v-model="event.name"
+          v-model="event.title"
           placeholder="Add an event title"
         />
       </div>
@@ -69,7 +69,14 @@ export default {
   },
   methods: {
     createEvent() {
-      console.log(this.event);
+      this.$store.dispatch('event/createEvent', this.event).then(() => {
+        this.$router
+          .push({
+            name: 'event-show',
+            params: { id: this.event.id },
+          })
+          .catch();
+      });
     },
     createFreshEventObject() {
       const user = this.$store.state.user.user;

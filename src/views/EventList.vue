@@ -14,7 +14,7 @@ export default {
   components: { EventCard },
   created() {
     this.$store.dispatch('event/fetchEvents', {
-      perPage: 2,
+      perPage: 4,
       page: this.page,
     });
   },

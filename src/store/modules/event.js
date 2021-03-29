@@ -9,6 +9,9 @@ export const state = {
 };
 
 export const mutations = {
+  ADD_EVENT(state, event) {
+    state.events.push(event);
+  },
   SET_EVENTS(state, events) {
     state.events = events;
   },
@@ -18,6 +21,15 @@ export const mutations = {
 };
 
 export const actions = {
+  createEvent({ commit, dispatch }, event) {
+    return EventService.postEvent(event)
+      .then(() => {
+        commit('ADD_EVENT', event);
+      })
+      .catch(err => {
+        console.log(err.message);
+      });
+  },
   fetchEvents({ commit, dispatch }, { perPage, page }) {
     EventService.getEvents(perPage, page)
       .then(res => {
@@ -29,7 +41,6 @@ export const actions = {
   },
   fetchEvent({ commit, getters, dispatch }, id) {
     let event = getters.getEventById(id);
-
     if (event) {
       commit('SET_EVENT', event);
     } else {
