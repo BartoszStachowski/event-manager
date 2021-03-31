@@ -4,6 +4,7 @@ import router from './router';
 import store from './store';
 import camelCase from 'lodash.camelcase';
 import upperFirst from 'lodash.upperfirst';
+import 'nprogress/nprogress.css';
 
 const requireComponent = require.context(
   './components',
