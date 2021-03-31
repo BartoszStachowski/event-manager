@@ -15,6 +15,11 @@ apiClient.interceptors.request.use(config => {
   return config;
 });
 
+apiClient.interceptors.response.use(response => {
+  NProgress.done();
+  return response;
+});
+
 export default {
   getEvents(perPage, page) {
     return apiClient.get(`/events?_limit=${perPage}&_page=${page}`);
