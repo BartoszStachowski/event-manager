@@ -15,6 +15,11 @@ npm run serve
 json-server --watch db.json
 ```
 
+### Run database with delay
+```
+json-server -d 1500 db.json
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
