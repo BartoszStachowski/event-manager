@@ -7,6 +7,7 @@ import NProgress from 'nprogress';
 import store from '@/store/index.js';
 import NotFound from '../views/NotFound';
 import NetworkIssue from '../views/NetworkIssue';
+import Example from '../views/Example';
 
 Vue.use(VueRouter);
 
@@ -53,6 +54,10 @@ const routes = [
     path: '/network-issue',
     name: 'network-issue',
     component: NetworkIssue,
+  },
+  {
+    path: '/example',
+    component: Example,
   },
   {
     path: '*',
