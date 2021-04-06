@@ -6,6 +6,9 @@ import camelCase from 'lodash.camelcase';
 import upperFirst from 'lodash.upperfirst';
 import 'nprogress/nprogress.css';
 import Vuelidate from 'vuelidate/src';
+import DateFilter from './filters/date';
+
+Vue.filter('date', DateFilter);
 
 Vue.use(Vuelidate);
 const requireComponent = require.context(
